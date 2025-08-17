@@ -6,29 +6,29 @@ class RemainderThm {
         int n = sc.nextInt();
         int[] a = new int[n];
         int[] m = new int[n];
-        int p = 1;
+        int M = 1;
         int x = 0;
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
         for (int i = 0; i < n; i++) {
             m[i] = sc.nextInt();
-            p *= m[i];
+            M *= m[i];
         }
 
         for (int i = 0; i < n; i++) {
-            int M = p/m[i];
-            int inv = 1;
+            int Mi = M/m[i];
+            int Minv;
             for (int j = 1; j < m[i]; j++) {
-                if ((M*j)%m[i] == 1) {
-                    inv = j;
+                if ((Mi*j)%m[i] == 1) {
+                    Minv = j;
                     break;
                 }
             }
-            x += a[i] * inv * M;
+            x += a[i] * Minv * Mi;
         }
-        x = x % p;
-        
+        x = x % M;
+
         System.out.println(x);
     }
 }
