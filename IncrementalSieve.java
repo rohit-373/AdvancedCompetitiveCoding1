@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class IncrementalSieve {
-    private List<Integer> primes = new ArrayList<>();
     private Map<Integer, List<Integer>> composites = new HashMap<>();
     private int current = 2;
 
@@ -9,7 +8,6 @@ public class IncrementalSieve {
         while (true) {
             if (!composites.containsKey(current)) {
                 // current is prime
-                primes.add(current);
                 composites.put(current * current, new ArrayList<>(Arrays.asList(current)));
                 return current++;
             } else {
