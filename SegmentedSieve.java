@@ -1,8 +1,7 @@
 import java.util.*;
 
 public class SegmentedSieve {
-    // Simple sieve to find all primes up to sqrt(n)
-    private static List<Integer> simpleSieve(int limit) {
+    static List<Integer> simpleSieve(int limit) {
         boolean[] isPrime = new boolean[limit + 1];
         Arrays.fill(isPrime, true);
         isPrime[0] = isPrime[1] = false;
@@ -20,8 +19,7 @@ public class SegmentedSieve {
         return primes;
     }
 
-    // Segmented sieve for range [low, high]
-    public static List<Integer> segmentedSieve(int low, int high) {
+    static List<Integer> segmentedSieve(int low, int high) {
         int limit = (int)Math.sqrt(high) + 1;
         List<Integer> primes = simpleSieve(limit);
 

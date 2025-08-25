@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class StrobogrammaticNumbers {
-    public static ArrayList<String> findList(int n, int length) {
+    static ArrayList<String> findList(int n, int length) {
         if (n == 0) {
             return new ArrayList<>(Arrays.asList(""));
         } 

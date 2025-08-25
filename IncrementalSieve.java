@@ -4,7 +4,7 @@ public class IncrementalSieve {
     private Map<Integer, List<Integer>> composites = new HashMap<>();
     private int current = 2;
 
-    public int nextPrime() {
+    int nextPrime() {
         while (true) {
             if (!composites.containsKey(current)) {
                 // current is prime
