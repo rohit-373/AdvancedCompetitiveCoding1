@@ -1,6 +1,6 @@
 import java.util.*;
 
-class SimpleSieve {
+public class SimpleSieve {
     public static ArrayList<Integer> simpleSieve(int n) {
         boolean[] isPrime = new boolean[n + 1];
         ArrayList<Integer> primes = new ArrayList<>();

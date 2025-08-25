@@ -1,6 +1,6 @@
 import java.util.*;
 
-class BinaryPalindrome {
+public class BinaryPalindrome {
     static boolean isBinPalindrome(int n) {
         String s = Integer.toBinaryString(n);
         StringBuilder sb = new StringBuilder(s);
