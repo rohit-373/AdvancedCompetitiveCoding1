@@ -6,7 +6,15 @@
         {
             "label": "Build and Run",
             "type": "shell",
-            "command": "javac ${file} && java ${fileBasenameNoExtension} && del ${fileBasenameNoExtension}.class",
+            "windows": {
+                "command": "javac ${file} && java ${fileBasenameNoExtension} && del ${fileBasenameNoExtension}.class"
+            },
+            "linux": {
+                "command": "javac ${file} && java ${fileBasenameNoExtension} && rm ${fileBasenameNoExtension}.class"
+            },
+            "osx": {
+                "command": "javac ${file} && java ${fileBasenameNoExtension} && rm ${fileBasenameNoExtension}.class"
+            },
             "problemMatcher": [],
             "group": {
                 "kind": "build",
