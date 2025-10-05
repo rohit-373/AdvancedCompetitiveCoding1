@@ -18,7 +18,7 @@ public class RemainderThm {
 
         for (int i = 0; i < n; i++) {
             int Mi = M/m[i];
-            int Minv;
+            int Minv = 1;
             for (int j = 1; j < m[i]; j++) {
                 if ((Mi*j)%m[i] == 1) {
                     Minv = j;

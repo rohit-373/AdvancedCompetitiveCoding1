@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class IncrementalSieve {
-    private Map<Integer, List<Integer>> composites = new HashMap<>();
+    private final Map<Integer, List<Integer>> composites = new HashMap<>();
     private int current = 2;
 
     int nextPrime() {
