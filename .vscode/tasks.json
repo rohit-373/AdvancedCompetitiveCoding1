@@ -1,19 +1,17 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
             "label": "Build and Run",
             "type": "shell",
             "windows": {
-                "command": "javac ${file} && java ${fileBasenameNoExtension} && del ${fileBasenameNoExtension}.class"
+                "command": "javac ${relativeFile} && java -classpath ${relativeFileDirname} ${fileBasenameNoExtension} && del ${relativeFileDirname}\\${fileBasenameNoExtension}.class"
             },
             "linux": {
-                "command": "javac ${file} && java ${fileBasenameNoExtension} && rm ${fileBasenameNoExtension}.class"
+                "command": "javac ${relativeFile} && java -classpath ${relativeFileDirname} ${fileBasenameNoExtension} && rm ${relativeFileDirname}/${fileBasenameNoExtension}.class"
             },
             "osx": {
-                "command": "javac ${file} && java ${fileBasenameNoExtension} && rm ${fileBasenameNoExtension}.class"
+                "command": "javac ${relativeFile} && java -classpath ${relativeFileDirname} ${fileBasenameNoExtension} && rm ${relativeFileDirname}/${fileBasenameNoExtension}.class"
             },
             "problemMatcher": [],
             "group": {
