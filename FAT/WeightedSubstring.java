@@ -2,7 +2,7 @@ import java.util.*;
 
 public class WeightedSubstring {
     static int maxSum(String P, String Q, int K, int N) {
-        HashSet<String> ans = new HashSet<>();
+        Set<String> ans = new HashSet<>();
 
         for (int i = 0; i < N; i++) {
             int sum = 0;
@@ -14,7 +14,7 @@ public class WeightedSubstring {
 
                 // int weight = P.charAt(j) - 'a' + 1; 
                 // sum += weight;
-                
+
                 s += P.charAt(j); // s = "a", "ab", 
 
                 if (sum <= K) {
