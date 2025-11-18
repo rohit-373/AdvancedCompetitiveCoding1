@@ -1,4 +1,5 @@
 import java.util.*;
+
 // aabccddd
 // {2, 1, 2, 3, 0, ..}
 public class FirstPalindromicString {
@@ -22,9 +23,9 @@ public class FirstPalindromicString {
             for (int j = 0; j < freq[i] / 2; j++) {
                 firstHalf = firstHalf + (char) (i + 'a');
                 lastHalf = (char) (i + 'a') + lastHalf;
-        // firstHalf = "ac"
-        // middleChar = "b"
-        // lastHalf = "ca"
+                // firstHalf = "ac"
+                // middleChar = "b"
+                // lastHalf = "ca"
             }
         }
         // "ac" + "b" + "ca" "acbca"

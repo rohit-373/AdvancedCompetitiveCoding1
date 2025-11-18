@@ -5,13 +5,13 @@
             "label": "Build and Run",
             "type": "shell",
             "windows": {
-                "command": "javac ${relativeFile} && java -classpath ${relativeFileDirname} ${fileBasenameNoExtension} && del ${relativeFileDirname}\\${fileBasenameNoExtension}.class"
+                "command": "cd ${fileDirname} && javac ${fileBasename} && java ${fileBasenameNoExtension} && del ${fileBasenameNoExtension}.class && cd .."
             },
             "linux": {
-                "command": "javac ${relativeFile} && java -classpath ${relativeFileDirname} ${fileBasenameNoExtension} && rm ${relativeFileDirname}/${fileBasenameNoExtension}.class"
+                "command": "javac ${file} && java -classpath ${fileDirname} ${fileBasenameNoExtension} && rm ${fileDirname}/${fileBasenameNoExtension}.class"
             },
             "osx": {
-                "command": "javac ${relativeFile} && java -classpath ${relativeFileDirname} ${fileBasenameNoExtension} && rm ${relativeFileDirname}/${fileBasenameNoExtension}.class"
+                "command": "javac ${file} && java -classpath ${fileDirname} ${fileBasenameNoExtension} && rm ${fileDirname}/${fileBasenameNoExtension}.class"
             },
             "problemMatcher": [],
             "group": {
