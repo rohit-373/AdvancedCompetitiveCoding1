@@ -26,6 +26,8 @@ public class SimpleSieve {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         ArrayList<Integer> primes = simpleSieve(n);
-        System.out.println(primes);
+        for (int i = 0; i < primes.size(); i++) {
+            System.out.print(primes.get(i) + " ");
+        }
     }
 }
